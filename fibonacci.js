@@ -1,43 +1,19 @@
-function fibonacci(n) {
-  if (n <= 0) {
-    return "Digite um número positivo";
-  }
-  
-  if (n === 1) {
-    
-    // primeiro termo é 0
-    return 0; 
-  }
-  
-  if (n === 2) {
-    
-    // segundo termo é 1
-    return 1; 
-  }
-  
-  // primeiro termo
-  let a = 0;
-  
-  // segundo termo 
-  let b = 1; 
-  let resultado = 0;
-  
-  for (let i = 3; i <= n; i++) {
-    resultado = a + b;
-    a = b;
-    b = resultado;
-  }
-  
-  return resultado;
+const fibonacci = (n) => {
+    if (n === 0) {
+        console.log ("O N-ésimo número é 0");
+    } else if (n === 1) {
+        console.log ("O N-ésimo número é 1");
+    } else {
+        let = termoAtual = 0;
+        let proximoTermo = 1;
+        let somaTermos = 0;
+        for (let x = 2; x < n; x++) {
+            somaTermos = termoAtual + proximoTermo;
+            termoAtual = proximoTermo;
+            proximoTermo = somaTermos;
+        }
+        console.log("O N-ésimo número é", proximoTermo);
+    }
 }
 
-// Testando
-
-// 0
-console.log(fibonacci(1));
-
-// 1
-console.log(fibonacci(2));
-
-// 8
-console.log(fibonacci(7));
+fibonacci(4);
