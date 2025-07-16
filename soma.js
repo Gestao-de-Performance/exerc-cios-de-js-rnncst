@@ -1,23 +1,15 @@
-// Importa o módulo readline para ler dados do teclado
-const readline = require('readline');
+//função soma
 
-// Cria a interface para entrada e saída
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+function soma (a, b) {
+  //aqui a função vai retornar os valores dados a A e B
+  
+  return (a + b)
+}
 
-// Pede o primeiro número
-rl.question('Digite o primeiro número: ', function(num1) {
-  // Pede o segundo número
-  rl.question('Digite o segundo número: ', function(num2) {
-    // Converte para número e calcula a soma
-    const soma = parseFloat(num1) + parseFloat(num2);
+//Variaveis x e y
 
-    // Exibe o resultado no console
-    console.log('A soma dos dois números é:', soma);
+let x = 199.3;
+let y = 120;
 
-    // Fecha a interface de leitura
-    rl.close();
-  });
-});
+// Exibe o resultado do programa.
+console.log(soma(x, y));
